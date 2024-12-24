@@ -1,0 +1,238 @@
+<html>
+    <title>My Protofolio</title>
+    <head>
+        <style>
+            /* General reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f9;
+                color: #333;
+                line-height: 1.6;
+            }
+    
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 0;
+            }
+    
+            nav ul {
+                list-style-type: none;
+                text-align: center;
+            }
+    
+            nav ul li {
+                display: inline;
+                margin-right: 20px;
+            }
+    
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+    
+            nav ul li a:hover {
+                color: #4CAF50;
+            }
+    
+            section {
+                padding: 20px;
+                margin: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+            }
+    
+            h2 {
+                color: #333;
+                margin-bottom: 10px;
+            }
+    
+            p {
+                font-size: 1rem;
+                color: #555;
+            }
+    
+            ul {
+                list-style-type: disc;
+                margin-left: 20px;
+            }
+    
+            
+    
+            a:hover {
+                text-decoration: underline;
+            }
+    
+            .project1, .project2 {
+                margin-bottom: 20px;
+            }
+    
+            .social-links {
+                text-align: center;
+                margin-top: 10px;
+            }
+    
+            .social-links a {
+                text-decoration: none;
+                color: #007BFF;
+                margin: 0 10px;
+            }
+    
+            .social-links a:hover {
+                text-decoration: underline;
+            }
+    
+            footer {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+                margin-top: 20px;
+            }
+    
+            footer p {
+                margin-bottom: 10px;
+            }
+    
+            footer .social-links a {
+                color: #fff;
+            }
+    
+            footer .social-links a:hover {
+                color: #4CAF50;
+            }
+    
+            form label {
+                font-weight: bold;
+                margin-top: 10px;
+            }
+    
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+    
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+    
+            button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#aboutme">About me</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="aboutme">
+            <h2>About me</h2>
+            <p>
+                <img src="suvetha.jpeg" alt="Profile" width="10%"><br><br>
+                I'm Suvetha, and I'm a passionate computer science student. I strive to explore and learn new things in my field. I believe in hard work and consistency as keys to success. I am always eager to take on challenges and adapt to new environments. My goal is to grow both personally and professionally while contributing to impactful projects and initiatives. I enjoy engaging in activities that enhance my knowledge and skills while balancing creativity and curiosity.</p>
+        </section>
+
+        <section id="skill">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Java</li>
+                <li>SQL</li>
+            </ul>
+        </section>
+
+        <section id="project">
+            <h2>Projects</h2>
+            <div class="project1">
+                <h4>Daily Expense Tracker Project </h4>
+            <p>The Daily Expense Tracker is a web-based application designed to help users manage their daily expenses efficiently. This project was developed using HTML, CSS, and JavaScript.</p>
+            <b>Key Features:</b>
+            <ul>
+            <li>User-friendly interface for easy expense tracking</li>
+            <li>Ability to add, edit, and delete expenses</li>
+            <li>Categorization of expenses for better organization</li>
+            <li>Calculation of total expenses and categorization-wise expenses</li>
+            </ul>
+            <a href="https://github.com/Suvetha-2003/mini-project.git" target="_blank" >
+            <button type="button" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+                Click to View
+            </button>
+        </a>
+           </div>
+
+    <div class="project2">
+        <h4>Student Performance Management System</h4>
+        <p>The Student Performance Management System is a comprehensive web-based application designed to streamline student performance tracking and management. This project was developed using HTML, CSS, JavaScript ans Angular.js.
+        </p>
+        <b>Key Features:</b>
+        <ul>
+            <li>Store and manage student details, including personal information, academic records, and attendance.</li>
+            <li>Record and track student grades across various subjects and semesters.</li>
+            <li>Generate reports and analytics to evaluate student performance, identifying strengths and weaknesses.</li>
+        </ul>
+        <a href="https://github.com/Suvetha-2003/Micro-Project" target="_blank" style="text-decoration: none;">
+            <button type="button" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+                Click to View
+            </button>
+        </a>
+        
+    </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Suvetha. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/suvetha-velusamy-603654280" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/Suvetha-2003" target="_blank">GitHub</a> |
+                <a href="mailto:suvethavelusamy697@gmail.com" target="_blank">Email</a>
+            </div>
+            <div class="map">
+                <h4>Find Me Here:</h4>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4694743479967!2d77.673774!3d10.1549721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b079cd0215c43d1%3A0x94c78db2959a2b6!2sK.%20S.%20Rangasamy%20College%20of%20Technology!5e0!3m2!1sen!2sin!4v1695201952258!5m2!1sen!2sin" 
+                    width="100%" height="200"  style="border:0;"  allowfullscreen=""  loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </footer>
+        
+    </body>
+</html>
