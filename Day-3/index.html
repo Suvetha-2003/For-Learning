@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h2><center>Employee Task Tracker</center></h2>
+    <section id="Form">
+        <form id="taskForm">
+            <div class="formgroup">
+                <label for="name">Employee Name : </label>
+                <input type="text" id="name" name="name" placeholder="Enter Employee Name" required>
+            </div>
+            <div class="formgroup">
+                <label for="title">Task Title : </label>
+                <input type="text" id="title" name="title" placeholder="Enter Employee Task" required><br>
+            </div>
+            <div class="formgroup">
+                <label for="desc">Task Description : </label>
+                <textarea id="desc" name="desc" required></textarea>
+            </div>
+            <div class="formgroup">
+                <label for="due">Due Date : </label>
+                <input type="date" id="due" required>
+            </div><br>
+            <button type="submit">Assign Task</button>
+        </form>
+    </section>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col">Employee Name</th>
+                <th colspan="2" scope="col">Task Details</th>
+                <th rowspan="2" scope="col">Due Date</th>
+            </tr>
+            <tr>
+                <th scope="col">Task Title</th>
+                <th scope="col">Task Description</th>
+            </tr>
+        </thead>
+        <tbody id="taskTableBody">
+            <!-- Task rows will be inserted here -->
+        </tbody>
+    </table>
+</body>
+</html>

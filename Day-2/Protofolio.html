@@ -2,139 +2,183 @@
     <title>My Protofolio</title>
     <head>
         <style>
-            /* General reset */
             * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
             }
-    
+            
             body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f9;
-                color: #333;
+                font-family: 'Roboto', sans-serif;
+                background: #f9f9f9;
+                color: #444;
                 line-height: 1.6;
+                padding: 0 15px;
             }
-    
+        
             header {
-                background-color: #333;
+                background: linear-gradient(90deg, #4CAF50, #2E7D32);
                 color: #fff;
-                padding: 10px 0;
+                padding: 15px 0;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             }
-    
+        
             nav ul {
-                list-style-type: none;
-                text-align: center;
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                margin-top: 10px;
             }
-    
+        
             nav ul li {
-                display: inline;
-                margin-right: 20px;
+                margin: 0 15px;
             }
-    
+        
             nav ul li a {
                 color: #fff;
                 text-decoration: none;
                 font-weight: bold;
+                transition: color 0.3s ease-in-out;
             }
-    
+        
             nav ul li a:hover {
-                color: #4CAF50;
+                color: #c8e6c9;
             }
-    
+        
             section {
-                padding: 20px;
-                margin: 20px;
-                background-color: #fff;
-                border-radius: 8px;
+                padding: 30px;
+                margin: 20px auto;
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                max-width: 800px;
             }
-    
+        
             h2 {
-                color: #333;
-                margin-bottom: 10px;
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+                color: #2E7D32;
             }
-    
-            p {
-                font-size: 1rem;
+        
+            p, ul {
+                margin-bottom: 15px;
                 color: #555;
             }
-    
             ul {
-                list-style-type: disc;
-                margin-left: 20px;
+                padding-left: 20px;
             }
-    
-            
-    
+        
+            ul li {
+                margin-bottom: 10px;
+            }
+        
+            a {
+                text-decoration: none;
+                color: #4CAF50;
+            }
+        
             a:hover {
                 text-decoration: underline;
             }
-    
+        
             .project1, .project2 {
                 margin-bottom: 20px;
+                background: #f4f4f4;
+                border-radius: 8px;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             }
-    
-            .social-links {
-                text-align: center;
-                margin-top: 10px;
-            }
-    
-            .social-links a {
-                text-decoration: none;
-                color: #007BFF;
-                margin: 0 10px;
-            }
-    
-            .social-links a:hover {
-                text-decoration: underline;
-            }
-    
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px;
-                margin-top: 20px;
-            }
-    
-            footer p {
-                margin-bottom: 10px;
-            }
-    
-            footer .social-links a {
-                color: #fff;
-            }
-    
-            footer .social-links a:hover {
-                color: #4CAF50;
-            }
-    
-            form label {
-                font-weight: bold;
-                margin-top: 10px;
-            }
-    
-            input, textarea {
-                width: 100%;
-                padding: 10px;
-                margin: 10px 0;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-            }
-    
+        
+            
+        
             button {
-                background-color: #4CAF50;
+                background: linear-gradient(90deg, #4CAF50, #2E7D32);
                 color: white;
                 padding: 10px 20px;
                 border: none;
                 border-radius: 4px;
                 cursor: pointer;
+                font-weight: bold;
+                transition: background 0.3s ease-in-out;
             }
-    
+        
             button:hover {
-                background-color: #45a049;
+                background: linear-gradient(90deg, #2E7D32, #4CAF50);
+            }
+        
+            .social-links {
+                text-align: center;
+                margin-top: 20px;
+            }
+        
+            .social-links a {
+                text-decoration: none;
+                color: #444;
+                margin: 0 10px;
+                transition: color 0.3s ease-in-out;
+            }
+        
+            .social-links a:hover {
+                color: #2E7D32;
+            }
+        
+            footer {
+                background: #333;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+                margin-top: 40px;
+                border-top: 5px solid #2E7D32;
+            }
+        
+            footer p {
+                margin-bottom: 10px;
+            }
+        
+            footer .social-links a {
+                color: #fff;
+            }
+        
+            footer .social-links a:hover {
+                color: #4CAF50;
+            }
+        
+            .map iframe {
+                border-radius: 10px;
+            }
+        
+            @media (max-width: 768px) {
+                header, footer {
+                    text-align: center;
+                }
+        
+                nav ul {
+                    flex-direction: column;
+                }
+        
+                nav ul li {
+                    margin: 10px 0;
+                }
+        
+                section {
+                    margin: 10px;
+                    padding: 15px;
+                }
+        
+                .social-links {
+                    display: flex;
+                    justify-content: center;
+                }
+        
+                .social-links a {
+                    margin: 0 5px;
+                }
             }
         </style>
+        
     </head>
     
     <body>
@@ -221,9 +265,9 @@
         <footer>
             <p>&copy; 2024 Suvetha. All Rights Reserved.</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/suvetha-velusamy-603654280" target="_blank">LinkedIn</a> |
-                <a href="https://github.com/Suvetha-2003" target="_blank">GitHub</a> |
-                <a href="mailto:suvethavelusamy697@gmail.com" target="_blank">Email</a>
+                <a href="https://www.linkedin.com/in/suvetha-velusamy-603654280" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="linkedin" width="2%" height="3%" style = "border-radius: 50%;"></a> |
+                <a href="https://github.com/Suvetha-2003" target="_blank"><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png " alt="github" width="2%" height="3%" style = "border-radius: 50%; margin-left: 5px;"></a> |
+                <a href="mailto:suvethavelusamy697@gmail.com subject:portfolio%20inquiry " target="_blank"><img src="https://i.pinimg.com/originals/88/e1/4c/88e14cc7e7fcbb0e0e09de26cec86c61.png" alt="mail" width="2%" height="3%" style = "border-radius: 50%"></a>
             </div>
             <div class="map">
                 <h4>Find Me Here:</h4>
