@@ -7,15 +7,33 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
     const dueDate = document.getElementById('due').value;
 
     const tableBody = document.getElementById('taskTableBody');
-    const newRow = tableBody.insertRow(); 
+    const existingRows = Array.from(tableBody.rows);
+    let existingCell = null;
 
-    const cell1 = newRow.insertCell(0); 
-    const cell2 = newRow.insertCell(1); 
-    const cell3 = newRow.insertCell(2); 
-    const cell4 = newRow.insertCell(3); 
-    const cell5 = newRow.insertCell(4); 
+    // Check if employeeName already exists in the table
+    for (let row of existingRows) {
+        if (row.cells[0].textContent === employeeName) {
+            existingCell = row.cells[0];
+            break;
+        }
+    }
 
-    cell1.textContent = employeeName;
+    const newRow = tableBody.insertRow();
+
+    // If employee name already exists, update rowSpan; otherwise, create a new cell
+    if (existingCell) {
+        const rowSpan = parseInt(existingCell.rowSpan) || 1;
+        existingCell.rowSpan = rowSpan + 1;
+    } else {
+        const cell1 = newRow.insertCell(0);
+        cell1.textContent = employeeName;
+    }
+
+    const cell2 = newRow.insertCell(existingCell ? 0 : 1); // Offset column if row is merged
+    const cell3 = newRow.insertCell(existingCell ? 1 : 2);
+    const cell4 = newRow.insertCell(existingCell ? 2 : 3);
+    const cell5 = newRow.insertCell(existingCell ? 3 : 4);
+
     cell2.textContent = taskTitle;
     cell3.textContent = taskDesc;
     cell4.textContent = dueDate;
@@ -30,11 +48,10 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
         document.getElementById('due').value = dueDate;
 
         document.querySelector('button[type="submit"]').textContent = 'Update Task';
-        
+
         document.getElementById('taskForm').onsubmit = function(event) {
             event.preventDefault();
-            
-            cell1.textContent = document.getElementById('name').value;
+
             cell2.textContent = document.getElementById('title').value;
             cell3.textContent = document.getElementById('desc').value;
             cell4.textContent = document.getElementById('due').value;
@@ -49,8 +66,14 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
     deleteButton.textContent = 'Delete';
     deleteButton.classList.add('delete-button');
     deleteButton.addEventListener('click', function() {
-        
-        tableBody.deleteRow(newRow.rowIndex - 1); 
+        const rowIndex = newRow.rowIndex - 1;
+
+        // Adjust rowSpan for merged cells
+        if (existingCell && existingCell.rowSpan > 1) {
+            existingCell.rowSpan--;
+        }
+
+        tableBody.deleteRow(rowIndex);
     });
 
     cell5.appendChild(editButton);
