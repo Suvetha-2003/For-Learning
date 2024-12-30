@@ -10,7 +10,6 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
     const existingRows = Array.from(tableBody.rows);
     let existingCell = null;
 
-    // Check if employeeName already exists in the table
     for (let row of existingRows) {
         if (row.cells[0].textContent === employeeName) {
             existingCell = row.cells[0];
@@ -20,7 +19,6 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
 
     const newRow = tableBody.insertRow();
 
-    // If employee name already exists, update rowSpan; otherwise, create a new cell
     if (existingCell) {
         const rowSpan = parseInt(existingCell.rowSpan) || 1;
         existingCell.rowSpan = rowSpan + 1;
@@ -29,7 +27,7 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
         cell1.textContent = employeeName;
     }
 
-    const cell2 = newRow.insertCell(existingCell ? 0 : 1); // Offset column if row is merged
+    const cell2 = newRow.insertCell(existingCell ? 0 : 1); 
     const cell3 = newRow.insertCell(existingCell ? 1 : 2);
     const cell4 = newRow.insertCell(existingCell ? 2 : 3);
     const cell5 = newRow.insertCell(existingCell ? 3 : 4);
@@ -68,7 +66,6 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
     deleteButton.addEventListener('click', function() {
         const rowIndex = newRow.rowIndex - 1;
 
-        // Adjust rowSpan for merged cells
         if (existingCell && existingCell.rowSpan > 1) {
             existingCell.rowSpan--;
         }
