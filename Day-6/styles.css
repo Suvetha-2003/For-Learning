@@ -1,0 +1,28 @@
+
+.navbar li {
+    display: inline;
+    margin-right: 35px;
+}
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+}
+.background {
+    background-image: url('https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/banner-bg.jpg');
+    min-height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.container {
+    position: absolute;
+    top: 20px;
+    left: 52%;
+}
+.navbar {
+    overflow: hidden;
+}
+.custom-btn{
+    border-radius: 50px;
+}

@@ -509,7 +509,7 @@ nav a:hover{
 
 .context{
     position: absolute; 
-    left: 10%; 
+    left: 20%; 
     top: 10%; 
     background-color: #3D405B; 
     color: white;
@@ -522,7 +522,7 @@ nav a:hover{
 
 .directions-btn {
     position: absolute; 
-    left: 10%;
+    left: 20%;
     margin-top: 130px;
     padding: 10px 20px;
     background-color: #E07A5F;
