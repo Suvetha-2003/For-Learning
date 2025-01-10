@@ -1,0 +1,170 @@
+.body{
+    font-family: 'Poppins', sans-serif;
+}
+.background {
+    background-image: url('https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/banner-bg.jpg');
+    min-height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-bottom-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+}
+.container {
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+}
+.navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 50px;
+    margin-left: auto;
+}
+.navbar li {
+    margin-right: 40px;
+}
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+}
+.custom-btn {
+    border-radius: 20px;
+    padding: 10px;
+    font-size: small;
+    width: 100px;
+}
+.heading{
+    margin-top: 18%;
+    font-weight: bold;
+    display: block;
+    margin-left: 500px;
+    color:white;
+}
+.heading a{
+    color: white;
+    text-decoration: none;
+}
+.heading h5{
+    padding-left: 30px;
+    padding-top: 30px;
+    font-size: large;
+}
+.background .heading h1{
+    font-weight: bold;
+}
+.reach-out {
+    margin: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+.reach-out-left {
+    background-color: #f7f7f7;
+    width: 48%;
+    height: 85vh;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-top: 5%;
+}
+.reach-out-left .header-section h6 {
+    color: #ee626b;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.reach-out-left .header-section h1 {
+    margin-top: 3%;
+    font-weight: 700;
+}
+.details p {
+    color: #b0acab;
+}
+.map-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 103vh;
+}
+iframe {
+    border-radius: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh;
+}
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+.form-row input {
+    width: 47%;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #b0acab;
+}
+.form-row input:focus-within {
+    border: 1px solid black;
+}
+form textarea {
+    padding: 15px 20px;
+    border-radius: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #b0acab;
+}
+.submit-button {
+    background-color: #ee626b;
+    width: 43%;
+    padding: 13px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s ease-in-out;
+    color: white;
+}
+.submit-button:hover {
+    background-color: #0071f8;
+}
+.footer .image{
+    margin-top: 15%;
+    border-radius: 125px;
+}
+footer{
+    background-image: url("https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/footer-bg.jpg");
+    padding: 30px 90px 90px;
+    text-align: center;
+    border-top-right-radius: 125px;
+    border-top-left-radius: 125px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 20%;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+footer a:hover{
+    color: gainsboro;
+}

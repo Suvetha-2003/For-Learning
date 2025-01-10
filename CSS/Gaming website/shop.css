@@ -1,0 +1,216 @@
+.background {
+    background-image: url('https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/banner-bg.jpg');
+    min-height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-bottom-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+}
+.container {
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 50px;
+    margin-left: auto;
+}
+.navbar li {
+    margin-right: 40px;
+}
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+}
+.custom-btn {
+    border-radius: 20px;
+    padding: 10px;
+    font-size: small;
+    width: 100px;
+}
+.shop-container-head h1 {
+    margin-top: 100px;
+    margin-right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+.shop-container-head h5 {
+    margin-right: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 40px;
+}
+.shop-container-head h5 a {
+    text-decoration: none;
+    color: inherit;
+}
+.center-button-container {
+    margin-top: 150px;
+    text-align: center; 
+}
+.center-button-container ul {
+    padding: 0; 
+    margin: 0; 
+}
+.center-button-container li {
+    display: inline-block; 
+    list-style-type: none;
+    margin: 0 10px; 
+}
+.row1{
+    display: inline-block;
+}
+.rows-images{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 8%;
+}
+.row1{
+    left: 100px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.images-prices{
+    text-align: right;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: #008af8;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+}
+.images-prices h5{
+    font-size: 18px;
+}
+.rows-images img{
+    border-radius: 20px;
+}
+.row1{
+    background-color: #eeeeee;
+    border-radius: 20px;
+    height: 300px;
+    width:250px;
+}
+.row1 div{
+    padding: 10px 20px;
+}
+.row1 div p{
+    font-size: 14px;
+    color: gray;
+}
+.row1 div h3{
+    transition: 0.3s ease-in-out;
+}
+.image-caption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.image-caption h3{
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: -10%;
+}
+.image-caption .fa-bag-shopping{
+    padding: 12px;
+    background-color: #ee626b;
+    color: white;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.row1:hover .fa-bag-shopping{
+    background-color: #008af8;
+}
+.row1:hover .image-caption h3{
+    color: #008af8;
+}
+.bottom-button {
+    display: flex;
+    justify-content: center;
+    padding: 50px; 
+    margin-top: 5%;
+}
+.bottom-button ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+}
+.bottom-button .btn {
+    background-color: #EEEEEE; 
+    color: black; 
+    border-radius: 30px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    padding: 6px 15px; 
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+.bottom-button .btn:hover {
+    background-color: #008af8;
+    color: white;
+}
+.bottom-button button:not(.btn) {
+    background-color: #008af8;
+    color: white;
+    border-radius: 30px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    padding: 6px 15px;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+.bottom-button button:not(.btn):hover {
+    background-color: #005bb5; 
+    color: white;
+}
+.footer .image{
+    margin-top: 15%;
+    border-radius: 125px;
+}
+footer{
+    background-image: url("https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/footer-bg.jpg");
+    padding: 30px 90px 90px;
+    text-align: center;
+    border-top-right-radius: 125px;
+    border-top-left-radius: 125px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10%;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+footer a:hover{
+    color: gainsboro;
+}
