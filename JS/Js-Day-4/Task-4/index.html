@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task-4</title>
+    </head>
+    <body>
+        <script>
+            const arr = [1, 2, 2, 3, 3, 3];
+            let count=arr.reduce(
+                (acc,curr)=>{
+                    if(acc[curr]){
+                        acc[curr]++;
+                    }
+                    else{
+                        acc[curr]=1;
+                    }
+                    return acc;
+                }
+            ,{});
+           let most=null;
+           for(let num in count){
+            if (count[num] > most) {
+                most = num;
+            }
+           }
+            console.log(most);
+        </script>
+    </body>
+</html>

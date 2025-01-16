@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task-9</title>
+    </head>
+    <body>
+        <script>
+            const obj = { a: 1, b: 2, c: 3 };
+            const filteredObj = Object.fromEntries(
+            Object.entries(obj).filter(([key]) => key !== 'c')
+            );
+            console.log(filteredObj); 
+            </script>
+            </body>
+            </html>
