@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    <h1>Keycode Sum</h1>
+    <div>
+        <input type="text" id="keyInput">
+        <button id="submitBtn">Submit</button>
+    </div>
+    <p id="output"></p>
+
+    <script>
+        
+        const keyInput = document.getElementById("keyInput");
+        const submitBtn = document.getElementById("submitBtn");
+        const output = document.getElementById("output");
+
+        submitBtn.addEventListener("click", () => {
+            let sum = 0;
+            for (const char of keyInput.value) {
+                sum += char.charCodeAt(0); 
+            }
+            output.textContent = `The total keycode sum is: ${sum}`;
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.ctrlKey && event.key === "s") {
+                event.preventDefault(); 
+                alert("Ctrl+S is disabled on this website!");
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.ctrlKey && event.shiftKey && event.key === 'Q') {
+                event.preventDefault();
+                alert("Tab close request triggered.");
+                    window.close(); 
+                }
+            }
+        );
+    </script>
+</body>
+</html>
