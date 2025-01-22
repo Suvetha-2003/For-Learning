@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h2><center>Student Details</center></h2>
+    <section id="Form">
+        <form id="details-form" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div class="formgroup">
+                <label for="name">Student Name: </label>
+                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+            </div>
+            <div class="formgroup">
+                <label for="age">Age: </label>
+                <input type="number" id="age" name="age" placeholder="Enter Age" required>
+            </div>
+            <div class="formgroup">
+                <label for="phone">Phone No: </label>
+                <input type="number" id="phone" name="phone" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="formgroup">
+                <p>Gender:</p>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+            <div class="formgroup">
+                <label>Select Subject:</label><br>
+                <input type="checkbox" id="english" name="subjects" value="English">English
+                <input type="checkbox" id="maths" name="subjects" value="Maths">Maths
+                <input type="checkbox" id="chemistry" name="subjects" value="Chemistry">Chemistry
+                <input type="checkbox" id="physics" name="subjects" value="Physics">Physics
+            </div>
+            <div class="formgroup">
+                <label for="dob">DOB: </label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="formgroup">
+                <label for="loc">Location: </label>
+                <select name="loc" id="loc" required>
+                    <option value="" disabled selected>Select Location</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <table border="1" id="studentlist">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Age</th>
+                <th>Phone Number</th>
+                <th>Gender</th>
+                <th>Subjects</th>
+                <th>DOB</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody id="taskTableBody">
+        </tbody>
+    </table>
+</body>
+</html>
