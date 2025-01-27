@@ -100,6 +100,7 @@ function editRecord(td) {
 
     document.getElementById("dob").value = selectedRow.cells[5].innerHTML;
     document.getElementById("loc").value = selectedRow.cells[6].innerHTML;
+    document.getElementById("submit-button").textContent = "Update";
 }
 
 function updateRecord(data) {
@@ -111,6 +112,7 @@ function updateRecord(data) {
     selectedRow.cells[5].innerHTML = data.dob;
     selectedRow.cells[6].innerHTML = data.loc;
     selectedRow = null;
+    document.getElementById("submit-button").textContent = "Submit";
 }
 
 function deleteRecord(td) {
@@ -124,4 +126,5 @@ function deleteRecord(td) {
 function resetForm() {
     document.getElementById("details-form").reset();
     selectedRow = null;
+    document.getElementById("submit-button").textContent = "Submit";
 }

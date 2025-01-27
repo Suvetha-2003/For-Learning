@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manager</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <h1 id="head">Event Manager</h1>
+
+    <div id="form-section">
+    <form id="eventForm">
+        <label for="eventTitle">Event Title:</label>
+        <input type="text" id="eventTitle" required><br><br>
+        <label for="eventDate">Event Date:</label>
+        <input type="date" id="eventDate" required><br><br>
+        <button type="submit" id="submitButton">Add Event</button>
+    </form>
+    <br>
+    <div class="filterbtn">
+    <button onclick="filterEvents('all')">All</button>
+    <button onclick="filterEvents('upcoming')">Upcoming</button>
+    <button onclick="filterEvents('past')">Past</button>
+    </div>
+</div>
+    <div id="result">
+    <h2>Events</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="eventList"></tbody>
+    </table>
+    <br><br>
+    <button onclick="Back()">Add Another Event</button>
+</div>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  h1, h2, h4 {
+    color: #007bff;
+  }
+  p {
+    color: #495057;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #loginpage {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin-top: 50px;
+  }
+  #loginpage .form-label {
+    font-weight: bold;
+  } 
+  #loginpage input {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+  }
+  #loginpage .btn {
+    background-color: #007bff;
+    color: white;
+  }
+  #emailError, #nameError {
+    font-size: 14px;
+    margin-top: 5px;
+    color: red;
+  }
+  #quizpage {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin-top: 20px;
+  }
+  #quizpage h2 {
+    margin-bottom: 20px;
+  }
+  #container2 {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    overflow-y: auto;
+  }
+  #container2 .question {
+    margin-bottom: 20px;
+  }
+  #resultpage {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin-top: 20px;
+  }
+  #results h2 {
+    margin-bottom: 20px;
+  }
+  #dashboardpage {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin-top: 20px;
+  }
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: center;
+  }
+  .table th {
+    background-color: #007bff;
+    color: white;
+  }
+  .table td {
+    background-color: #f8f9fa;
+  }
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
