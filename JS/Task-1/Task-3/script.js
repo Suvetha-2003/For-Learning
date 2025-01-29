@@ -23,7 +23,7 @@ let selectedRow = null;
         }
 
         function calculateStatus(date) {
-            return new Date(date) >= new Date() ? "Upcoming" : "Past";
+            return new Date(date) < new Date() ? "Past" : "Upcoming";
         }
 
         function insertEvent(data) {
