@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observable</title>
+</head>
+<body>
+<h2>OBSERVABLE</h2>
+</body>
+<script>
+    class Observable {
+  constructor() {
+    this.observers = []; 
+    this.state = null; 
+  }
+  subscribe(observer) {
+    if (typeof observer === 'function') {
+      this.observers.push(observer);
+    }
+  }
+  unsubscribe(observer) {
+    this.observers = this.observers.filter(obs => obs !== observer);
+  }
+  notify() {
+    this.observers.forEach(observer => observer(this.state));
+  }
+  setState(state) {
+    this.state = state;
+    this.notify(); 
+  }
+}
+const observable = new Observable();
+const observer1 = (state) => console.log('Observer 1 notified with state:', state);
+const observer2 = (state) => console.log('Observer 2 notified with state:', state);
+observable.subscribe(observer1);
+observable.subscribe(observer2);
+observable.setState('New State');
+observable.unsubscribe(observer1);
+observable.setState('Updated State');
+</script>
+</html>
