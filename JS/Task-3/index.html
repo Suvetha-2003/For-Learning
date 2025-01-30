@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <section id="loginSection" class="text-center text-lg-start">
+            <div class="card mb-3">
+                <div class="row g-0 d-flex align-items-center">
+                    <div class="col-lg-4 d-none d-lg-flex">
+                        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" 
+                            alt="Trendy Pants and Shoes"
+                            class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card-body py-5 px-md-5">
+                            <form onsubmit="event.preventDefault(); login();">
+                                <div class="form-outline mb-4">
+                                    <input type="email" id="username" class="form-control" required />
+                                    <label class="form-label" for="username">Email address</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="password" class="form-control" required />
+                                    <label class="form-label" for="password">Password</label>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-center">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rememberMe" checked />
+                                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#!">Forgot password?</a>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        const emailRegex = /^[a-zA-Z._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (!emailRegex.test(username)) {
+                alert("Please enter a valid email address.");
+                return false; 
+            }
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;  
+            }
+            return true;
+        }
+    
+        function login() {
+            if (!validateForm()) return;
+    
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+    
+            if (username === 'user@example.com' && password === 'password') {
+                alert('Login successful!');
+                window.location.href = `product.html?name=${encodeURIComponent(username)}`; 
+            } else {
+                alert('Incorrect username or password.');
+            }
+        }
+    </script>
+    
+</body>
+</html>
