@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!countdownElement) return;
     function updateCountdown() {
       let now = new Date().getTime();
-      let deadline = new Date(task.estimatedTime).getTime(); // Ensure estimatedTime is a timestamp
+      let deadline = new Date(task.estimatedTime).getTime(); 
       let timeLeft = deadline - now;
       if (timeLeft <= 0) {
         countdownElement.innerHTML = "<span style='color: red;'>⏳ Overdue</span>";
@@ -192,7 +192,7 @@ function editTask(index) {
   document.getElementById("saveTaskBtn").onclick = function () {
     let title = document.getElementById("task-title").value.trim();
     let description = document.getElementById("task-description").value.trim();
-    let estimatedTime = new Date(document.getElementById("task-estimate-time").value).getTime();  // Convert to timestamp
+    let estimatedTime = new Date(document.getElementById("task-estimate-time").value).getTime();  
     let priority = document.getElementById("Priority").value;
     if (!title || !description || !estimatedTime || !priority) {
       alert("Please fill out all fields before submitting.");
