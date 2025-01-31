@@ -126,33 +126,22 @@ function renderTasks(filterStatus = "all", filterPriority = "all") {
   function endTimer(index) {
     let task = taskList[index];
     let countdownElement = document.getElementById(`countdown-${index}`);
-    let endTime = new Date().getTime(); // Record end time
+    let endTime = new Date().getTime(); 
     
-    task.completed = true;  // Mark as completed
-    task.endTime = endTime; // Save the end time
-    
-    // Stop the countdown interval if it's still running
+    task.completed = true;  
+    task.endTime = endTime; 
     if (task.countdownInterval) {
       clearInterval(task.countdownInterval);
-      task.countdownInterval = null;  // Ensure it's nullified after stopping
+      task.countdownInterval = null;  
     }
-    
-    // Update the countdown display to 'Completed' when the task is finished
     countdownElement.innerHTML = "Completed";
-    
-    // Update task points based on completion time
     calculatePoints(index, task);
-    
-    // Disable the Start Now button and show End Now button
     document.querySelector(`[data-index="${index}"].start-task`).disabled = false;
     document.querySelector(`[data-index="${index}"].end-task`).style.display = 'none';
     
-    saveTasks();  // Save the updated task state
-    renderTasks(); // Re-render tasks after completing the task
+    saveTasks(); 
+    renderTasks(); 
   }
-  
-  
-  
   document.getElementById("taskForm").addEventListener("submit", (event) => {
     event.preventDefault();
     let title = document.getElementById("task-title").value.trim();
