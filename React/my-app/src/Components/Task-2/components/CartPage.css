@@ -1,0 +1,36 @@
+.cart-page {
+    text-align: center;
+    padding: 20px;
+  }
+  .back-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cart-item {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+  }
+  .cart-image {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+  }
+  .cart-details h3 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
